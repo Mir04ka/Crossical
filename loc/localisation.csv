@@ -1,0 +1,19 @@
+key,en,ru
+htp1,How to play:,Как играть:
+htp2,Each turn a player places his symbol in any unoccupied square of the field (9 by 9).,Каждый ход игрок ставит свой символ в любую незанятую клетку поля (9 на 9).
+htp3,"If a new symbol placed by a player forms a row of three or more identical symbols vertically, horizontally and diagonally, the player captures those squares on the master field (3 by 3) on which these rows fall.","Если новый символ, который поставил игрок образует ряд из трех и более одинаковых символа по вертикали, горизонтали и диагоналям, то игрок захватывает те клетки на мастер-поле (3 на 3), на которые попадают эти ряды."
+htp4,The cells of the master field can be recaptured.,Клетки мастер поля могут быть перезахвачены.
+htp5,"If a player extends a row of his symbols, the row is considered a new one.","Если игрок продлевает ряд своих символов, то ряд считается новым."
+p_color,Primary color,Основной цвет
+s_color,Secondary color,Дополнительный цвет
+volume,Volume ,Громкость
+wanna_help,Want to improve this section?,Хочешь улучшить этот раздел?
+type_me,> Text me <,> Напиши мне <
+contact,> Contact me <,> Связаться со мной <
+game_by,Game by Mirka,Игра от Mirka
+version,Version,Версия
+winner,Winner,Победитель
+tie,Tie,Ничья
+colors,Colors,Цвета
+language_s,EN ,РУ 
+saved, Save , Сохранение 

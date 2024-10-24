@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Crossical"
+run/main_scene="res://scenes/mainMenuScreen.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://textures/GUI/Splash.png"
+config/icon="res://textures/Logos/logo.svg"
+boot_splash/minimum_display_time=300
+
+[audio]
+
+buses/default_bus_layout="res://sounds/default_bus_layout.tres"
+
+[autoload]
+
+ResourceManager="*res://scripts/game/ResourceManager.gd"
+GameSaver="*res://scripts/game/GameSaver.gd"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=1200
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+window/handheld/orientation=1
+
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="C:/Users/mirka/Videos/Godot/Gameplay.avi"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://loc/localisation.en.translation", "res://loc/localisation.ru.translation")
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

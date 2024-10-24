@@ -1,0 +1,197 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0rbwwrery4hq"]
+
+[ext_resource type="Texture2D" uid="uid://d33e34e4gr2il" path="res://textures/Cross.png" id="1_5q3ma"]
+[ext_resource type="Texture2D" uid="uid://byw1og0pkiriu" path="res://textures/Circle.png" id="1_ioq45"]
+[ext_resource type="Texture2D" uid="uid://cxb4qakn53ki8" path="res://textures/field9.png" id="1_npf8d"]
+[ext_resource type="Script" path="res://scripts/TextureRect.gd" id="2_a3dg5"]
+[ext_resource type="Texture2D" uid="uid://wo485ai3i083" path="res://textures/Try.png" id="3_xt8ob"]
+[ext_resource type="Texture2D" uid="uid://bhqbwh0cvy51b" path="res://textures/Vec.png" id="4_3tw7i"]
+[ext_resource type="StyleBox" uid="uid://uaicsutng4rx" path="res://styles/texture_button.tres" id="7_vw422"]
+[ext_resource type="ButtonGroup" uid="uid://cojj3da26kmmx" path="res://styles/buttons.tres" id="8_c5m07"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lbrwc"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PortContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/PortContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PortContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PortContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_5q3ma")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/PortContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_ioq45")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/PortContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_xt8ob")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/PortContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_3tw7i")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Field" type="TextureRect" parent="MarginContainer/PortContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_npf8d")
+expand_mode = 5
+stretch_mode = 5
+script = ExtResource("2_a3dg5")
+
+[node name="MainGrid" type="GridContainer" parent="MarginContainer/PortContainer/Field"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Button" type="Button" parent="MarginContainer/PortContainer/Field/MainGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("7_vw422")
+theme_override_styles/hover = ExtResource("7_vw422")
+theme_override_styles/pressed = ExtResource("7_vw422")
+theme_override_styles/disabled = ExtResource("7_vw422")
+theme_override_styles/focus = ExtResource("7_vw422")
+toggle_mode = true
+button_group = ExtResource("8_c5m07")
+icon = ExtResource("1_ioq45")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MinimapGrid" type="GridContainer" parent="MarginContainer/PortContainer/Field"]
+modulate = Color(1, 1, 1, 0.117647)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="0" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_3tw7i")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="1" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_xt8ob")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="2" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ioq45")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="3" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ioq45")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="4" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_5q3ma")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="5" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ioq45")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="6" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_xt8ob")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="7" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_5q3ma")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="8" type="TextureRect" parent="MarginContainer/PortContainer/Field/MinimapGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_3tw7i")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="MarginContainer/PortContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lbrwc")
+text = "PLAY"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

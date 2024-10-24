@@ -1,0 +1,210 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnpoa5yap3hd6"]
+
+[ext_resource type="Theme" uid="uid://c8neot36y0s3q" path="res://styles/main_theme.tres" id="1_4at01"]
+[ext_resource type="Script" path="res://scripts/customisationScreen.gd" id="1_g4bfm"]
+[ext_resource type="Texture2D" uid="uid://bcqquyqgc8fx5" path="res://textures/GUI/back.png" id="2_86t1r"]
+[ext_resource type="FontFile" uid="uid://dl2jle6i6l7qr" path="res://fonts/UbuntuMono-Bold.ttf" id="4_t154y"]
+[ext_resource type="FontFile" uid="uid://jppuuffx1d06" path="res://fonts/UbuntuMono-Regular.ttf" id="5_srghh"]
+[ext_resource type="Texture2D" uid="uid://ceb7cnsg3m8lq" path="res://textures/GUI/colorRect.png" id="6_65n4q"]
+[ext_resource type="StyleBox" uid="uid://uaicsutng4rx" path="res://styles/texture_button.tres" id="7_emek6"]
+[ext_resource type="Texture2D" uid="uid://cb8jonw7xy0v1" path="res://textures/shapes/Circle.png" id="8_ne44w"]
+
+[node name="customisationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4bfm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_4at01")
+theme_override_constants/icon_max_width = 100
+icon = ExtResource("2_86t1r")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("4_t154y")
+theme_override_font_sizes/font_size = 48
+text = "Colors"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pColorButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_srghh")
+theme_override_font_sizes/font_size = 32
+text = "Primary color"
+icon = ExtResource("6_65n4q")
+
+[node name="sColorButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_srghh")
+theme_override_font_sizes/font_size = 32
+text = "Secondary color"
+icon = ExtResource("6_65n4q")
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("4_t154y")
+theme_override_font_sizes/font_size = 48
+text = "Shapes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("7_emek6")
+theme_override_styles/hover = ExtResource("7_emek6")
+theme_override_styles/pressed = ExtResource("7_emek6")
+theme_override_styles/disabled = ExtResource("7_emek6")
+theme_override_styles/focus = ExtResource("7_emek6")
+toggle_mode = true
+icon = ExtResource("8_ne44w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("7_emek6")
+theme_override_styles/hover = ExtResource("7_emek6")
+theme_override_styles/pressed = ExtResource("7_emek6")
+theme_override_styles/disabled = ExtResource("7_emek6")
+theme_override_styles/focus = ExtResource("7_emek6")
+toggle_mode = true
+icon = ExtResource("8_ne44w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("7_emek6")
+theme_override_styles/hover = ExtResource("7_emek6")
+theme_override_styles/pressed = ExtResource("7_emek6")
+theme_override_styles/disabled = ExtResource("7_emek6")
+theme_override_styles/focus = ExtResource("7_emek6")
+toggle_mode = true
+icon = ExtResource("8_ne44w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("7_emek6")
+theme_override_styles/hover = ExtResource("7_emek6")
+theme_override_styles/pressed = ExtResource("7_emek6")
+theme_override_styles/disabled = ExtResource("7_emek6")
+theme_override_styles/focus = ExtResource("7_emek6")
+toggle_mode = true
+icon = ExtResource("8_ne44w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Control2" type="Control" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("4_t154y")
+theme_override_font_sizes/font_size = 48
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("4_t154y")
+theme_override_font_sizes/font_size = 64
+text = "-"
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("5_srghh")
+theme_override_font_sizes/font_size = 64
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("4_t154y")
+theme_override_font_sizes/font_size = 64
+text = "+"
+
+[node name="Label4" type="Label" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("1_4at01")
+theme_override_fonts/font = ExtResource("5_srghh")
+theme_override_font_sizes/font_size = 32
+text = "Version 0.2 DEV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
