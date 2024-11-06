@@ -14,6 +14,6 @@ func _enter_tree():
 
 func _on_settings_button_pressed():
 	%AnimationPlayer.play("disappear")
-	await %AnimationPlayer.animation_finished
-	
+
+func change_scene():
 	get_tree().change_scene_to_file("res://scenes/mainMenuScreen.tscn")

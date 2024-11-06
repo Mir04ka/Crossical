@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cnpoa5yap3hd6"]
+[gd_scene load_steps=30 format=3 uid="uid://cnpoa5yap3hd6"]
 
 [ext_resource type="Theme" uid="uid://c8neot36y0s3q" path="res://styles/main_theme.tres" id="1_4at01"]
 [ext_resource type="Script" path="res://scripts/customisationScreen.gd" id="1_g4bfm"]
@@ -10,14 +10,21 @@
 [ext_resource type="StyleBox" uid="uid://uaicsutng4rx" path="res://styles/texture_button.tres" id="7_emek6"]
 [ext_resource type="Texture2D" uid="uid://cb8jonw7xy0v1" path="res://textures/shapes/Circle.png" id="8_ne44w"]
 [ext_resource type="ButtonGroup" uid="uid://caf5lbqw3twy2" path="res://styles/button_group.tres" id="9_4vsbv"]
+[ext_resource type="Texture2D" uid="uid://cws2l2bi5rrit" path="res://textures/GUI/Dash.png" id="9_gj4p2"]
 [ext_resource type="Texture2D" uid="uid://ca1y4036mbrfm" path="res://textures/shapes/Cross2.png" id="10_o0x45"]
 [ext_resource type="Texture2D" uid="uid://f84twwdbucon" path="res://textures/shapes/Romb.png" id="11_hnbfo"]
 [ext_resource type="Texture2D" uid="uid://ctl0gt3rfqy7w" path="res://textures/shapes/Star2.png" id="12_gh2xg"]
 [ext_resource type="Texture2D" uid="uid://c47v8b1ta4u8p" path="res://textures/shapes/Try.png" id="13_6tee5"]
 [ext_resource type="Texture2D" uid="uid://dloea2vnewpic" path="res://textures/shapes/Vec.png" id="14_espfa"]
 [ext_resource type="AudioStream" uid="uid://bd6342i323qsi" path="res://sounds/click.wav" id="16_2fwvs"]
+[ext_resource type="Shader" path="res://shaders/shadow_shader.gdshader" id="16_4ogl8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_702j1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tnelq"]
+shader = ExtResource("16_4ogl8")
+shader_parameter/cut_value = -0.3
+shader_parameter/col = Vector3(1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_0lyql"]
 length = 0.001
@@ -168,26 +175,38 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CanvasLayer/TextureRect:visible")
+tracks/12/path = NodePath("CanvasLayer/ShaderRect:material:shader_parameter/cut_value")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [-0.3]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CanvasLayer/TextureRect:modulate")
+tracks/13/path = NodePath("CanvasLayer/ShaderRect:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/sColorButton/DashRect:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_cc0tg"]
@@ -302,33 +321,17 @@ tracks/8/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_cwep7"]
-resource_name = "change_theme"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/TextureRect:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/TextureRect:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/sColorButton/DashRect:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.075, 0.375),
+"transitions": PackedFloat32Array(3, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_fbkd3"]
@@ -495,6 +498,225 @@ tracks/9/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/sColorButton/DashRect:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.125, 0.425),
+"transitions": PackedFloat32Array(3, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ecfs"]
+resource_name = "disappear_and_quit"
+length = 0.5
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/UpButtons:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.175, 0.475),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/pColorButton:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15, 0.45),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/sColorButton:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.125, 0.425),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/Label3:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.075, 0.375),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/Label5:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.05, 0.35),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/LinkButton:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.025, 0.325),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/Label4:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(3, 3),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("VBoxContainer/MarginContainer/VBoxContainer/sColorButton/DashRect:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.125, 0.425),
+"transitions": PackedFloat32Array(3, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cwep7"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ShaderRect:material:shader_parameter/cut_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5, -0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ShaderRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_au6r2"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ShaderRect:material:shader_parameter/cut_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ShaderRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_306ok"]
 resource_name = "open_color_peaker"
@@ -540,9 +762,11 @@ tracks/2/keys = {
 _data = {
 "RESET": SubResource("Animation_0lyql"),
 "appear": SubResource("Animation_cc0tg"),
-"change_theme": SubResource("Animation_cwep7"),
 "close_color_peaker": SubResource("Animation_fbkd3"),
 "disappear": SubResource("Animation_rmaw2"),
+"disappear_and_quit": SubResource("Animation_8ecfs"),
+"fade_in": SubResource("Animation_cwep7"),
+"fade_out": SubResource("Animation_au6r2"),
 "open_color_peaker": SubResource("Animation_306ok")
 }
 
@@ -621,6 +845,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="pColorButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme = ExtResource("1_4at01")
@@ -632,12 +857,22 @@ icon = ExtResource("6_65n4q")
 [node name="sColorButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 layout_mode = 2
 theme = ExtResource("1_4at01")
 theme_override_fonts/font = ExtResource("5_srghh")
 theme_override_font_sizes/font_size = 32
 text = "s_color"
 icon = ExtResource("6_65n4q")
+
+[node name="DashRect" type="TextureRect" parent="VBoxContainer/MarginContainer/VBoxContainer/sColorButton"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 1, 1)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_gj4p2")
 
 [node name="Control" type="Control" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 visible = false
@@ -800,7 +1035,7 @@ size_flags_vertical = 10
 theme = ExtResource("1_4at01")
 theme_override_fonts/font = ExtResource("5_srghh")
 theme_override_font_sizes/font_size = 32
-text = "v0.4(RELEASE)"
+text = "v1.0(RELEASE)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -841,7 +1076,7 @@ size_flags_vertical = 2
 theme = ExtResource("1_4at01")
 theme_override_fonts/font = ExtResource("4_t154y")
 theme_override_font_sizes/font_size = 64
-text = "Primary"
+text = "p_color"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1065,14 +1300,16 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="ShaderRect" type="ColorRect" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
+material = SubResource("ShaderMaterial_tnelq")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

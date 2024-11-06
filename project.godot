@@ -14,9 +14,9 @@ config/name="Crossical"
 run/main_scene="res://scenes/mainMenuScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://textures/GUI/Splash.png"
+boot_splash/image="res://textures/GUI/thexord_splash.png"
 config/icon="res://textures/Logos/logo.svg"
-boot_splash/minimum_display_time=300
+boot_splash/minimum_display_time=500
 
 [audio]
 
@@ -48,3 +48,4 @@ locale/translations=PackedStringArray("res://loc/localisation.en.translation", "
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
