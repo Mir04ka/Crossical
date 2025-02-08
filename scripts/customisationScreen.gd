@@ -5,6 +5,10 @@ extends Control
 var _is_peeking_primary : bool = true
 var _is_buttons_disabled : bool = false
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		%AnimationPlayer.play("disappear_and_quit")
+
 func _set_icon_color():
 	var prim_color = ResourceManager.get_primary_color()
 	var sec_color = ResourceManager.get_secondary_color()

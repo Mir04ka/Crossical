@@ -8,6 +8,8 @@ Each turn a player places his symbol in any unoccupied square of the field (9 by
 
 If a new symbol placed by a player forms a row of three or more identical symbols vertically, horizontally and diagonally, the player captures those squares on the master field (3 by 3) on which these rows fall.
 
+To win you must line up your symbols horizontally, vertically or diagonally.
+
 The cells of the master field can be recaptured.
 
 If a player extends a row of his symbols, the row is considered a new one.

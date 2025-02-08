@@ -1,11 +1,12 @@
 key,en,ru
 htp1,How to play:,Как играть:
-htp2,Each turn a player places his symbol in any unoccupied square of the field (9 by 9).,Каждый ход игрок ставит свой символ в любую незанятую клетку поля (9 на 9).
-htp3,"If a new symbol placed by a player forms a row of three or more identical symbols vertically, horizontally and diagonally, the player captures those squares on the master field (3 by 3) on which these rows fall.","Если новый символ, который поставил игрок образует ряд из трех и более одинаковых символа по вертикали, горизонтали и диагоналям, то игрок захватывает те клетки на мастер-поле (3 на 3), на которые попадают эти ряды."
-htp4,The cells of the master field can be recaptured.,Клетки мастер поля могут быть перезахвачены.
-htp5,"If a player extends a row of his symbols, the row is considered a new one.","Если игрок продлевает ряд своих символов, то ряд считается новым."
-p_color,Primary color,Основной цвет
-s_color,Secondary color,Дополнительный цвет
+htp2,Each turn a player places his symbol in any unoccupied square of the 9 by 9 field.,Каждый ход игрок ставит свой символ в любую незанятую клетку поля 9 на 9.
+htp3,"If a new symbol placed by a player forms a row of three or more identical symbols vertically, horizontally or diagonally, the player captures those squares on the master field (3 by 3) on which this row falls.","Если новый символ, который поставил игрок, образует ряд из трех и более одинаковых символов по вертикали, горизонтали или диагоналям, то игрок захватывает те клетки на поле 3 на 3, на которые попадает этот ряд."
+htp4,"To win you must line up your symbols horizontally, vertically or diagonally on master field.","Для победы нужно составить ряд своих символов по горизонтали, вертикали или диагонали на поле 3 на 3."
+htp5,The cells of the master field can be recaptured.,Клетки поля 3 на 3 могут быть перезахвачены.
+htp6,"If a player extends a row of his symbols, the row is considered a new one.","Если игрок продлевает ряд своих символов, то ряд считается новым."
+p_color,Primary,Основной
+s_color,Secondary,Дополнительный
 volume,Volume ,Громкость
 wanna_help,Want to improve this section?,Хочешь улучшить этот раздел?
 type_me,> Text me <,> Напиши мне <

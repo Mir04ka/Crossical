@@ -12,11 +12,12 @@ config_version=5
 
 config/name="Crossical"
 run/main_scene="res://scenes/mainMenuScreen.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://textures/GUI/thexord_splash.png"
+boot_splash/show_image=false
+boot_splash/image="res://textures/GUI/TH_splash.png"
 config/icon="res://textures/Logos/logo.svg"
-boot_splash/minimum_display_time=500
 
 [audio]
 
@@ -39,6 +40,8 @@ window/handheld/orientation=1
 
 movie_writer/mjpeg_quality=1.0
 movie_writer/movie_file="C:/Users/mirka/Videos/Godot/Gameplay.avi"
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 
 [internationalization]
 

@@ -6,10 +6,15 @@ var turn: int
 var total_turns: int
 var map9: Array[Array]
 var map3: Array[Array]
+var is_bot: Array
 
 @export var indicator : HBoxContainer
 @export var minimap : GridContainer
 @export var field : GridContainer
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST and not is_started:
+		%AnimationPlayer.play("close_from_winner")
 
 func _enter_tree():
 	material.set_shader_parameter("fill_color", ResourceManager.get_primary_color())

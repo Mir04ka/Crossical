@@ -1,12 +1,16 @@
 extends Control
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		%AnimationPlayer.play("click_back")
+
 func _enter_tree():
-	if GameSaver.save_exist == true:
-		%continueButton.modulate.a = 255
-		print("yaya")
-	else:
-		%continueButton.modulate.a = 0
-		print("booo")
+	#if GameSaver.save_exist == true:
+		#%continueButton.modulate.a = 255
+		#print("yaya")
+	#else:
+		#%continueButton.modulate.a = 0
+		#print("booo")
 	
 	%AnimationPlayer.play("appear")
 

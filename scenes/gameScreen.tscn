@@ -310,6 +310,20 @@ tracks/8/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_go_main_menu"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_xh55w"]
 resource_name = "close_winner"
@@ -440,6 +454,20 @@ tracks/6/keys = {
 "values": [{
 "args": [],
 "method": &"exit"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_go_main_menu"
 }]
 }
 
@@ -787,11 +815,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = ExtResource("8_58nnt")
+theme_override_styles/focus = ExtResource("8_58nnt")
+theme_override_styles/disabled = ExtResource("8_58nnt")
 theme_override_styles/hover = ExtResource("8_58nnt")
 theme_override_styles/pressed = ExtResource("8_58nnt")
-theme_override_styles/disabled = ExtResource("8_58nnt")
-theme_override_styles/focus = ExtResource("8_58nnt")
+theme_override_styles/normal = ExtResource("8_58nnt")
 toggle_mode = true
 icon = ExtResource("2_u4gtu")
 icon_alignment = 1

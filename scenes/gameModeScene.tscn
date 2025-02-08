@@ -678,7 +678,6 @@ text = "4"
 
 [node name="continueButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
-visible = false
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(200, 120)
@@ -686,6 +685,7 @@ layout_mode = 2
 theme = ExtResource("2_upwj0")
 theme_override_fonts/font = ExtResource("5_e23ch")
 theme_override_font_sizes/font_size = 64
+disabled = true
 text = "saved"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
