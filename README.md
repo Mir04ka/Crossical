@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/d9b49423-6d3e-46e2-a8c1-a930c5c3674b)
 
 ## Google play
-https://play.google.com/store/apps/details?id=org.thexord.crossical&pcampaignid=web_share
+https://play.google.com/store/apps/details?id=org.thexord.crossical
 
 ## Rules
 Each turn a player places his symbol in any unoccupied square of the field (9 by 9).
